@@ -11,6 +11,7 @@ body {
 
 .main-wrapper {
   display: flex;
+  background-color: #f5f5f7;
 }
 
 section {
@@ -54,8 +55,11 @@ section {
   font-size: 20px;
 }
 .count {
+  position: absolute;
   flex: 2;
-  /* text-align: right; */
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 1000%);
   line-height: 1;
   padding: 0 1rem;
 }
@@ -69,7 +73,7 @@ section {
 }
 .ml16 {
   font-family: "Solenoidal";
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 100;
   overflow: hidden;
 }
@@ -122,9 +126,9 @@ nav > div {
 
 .links {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 5em;
-  padding-left: 1rem;
+  padding-left: 3rem;
 }
 .header {
   display: flex;
@@ -132,10 +136,12 @@ nav > div {
 }
 
 .header h1 {
+  left: 10%;
   float: 1;
-  /* position: absolute; */
+  position: absolute;
+  font-family: "Amoret Script";
   font-size: 20vw;
-  font-weight: 500;
+  font-weight: 100;
   /* text-transform: uppercase; */
   line-height: 1;
   text-align: center;
@@ -170,20 +176,32 @@ nav > div {
 }
 
 .img:nth-child(1) {
-  background-image: url("https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("https://i.pinimg.com/control/564x/01/24/73/01247305bd1f1dd27f1b24cdf78ac61a.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .img:nth-child(2) {
-  background-image: url("https://images.unsplash.com/photo-1519955045385-7cdb8e07c76f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("https://i.pinimg.com/564x/14/5b/e4/145be422a367397f045de1d919e2f04e.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img:nth-child(3) {
+  background-image: url("https://i.pinimg.com/control/564x/bf/da/b2/bfdab2ecd0d338903a3c75d3e1cc1934.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .section-2 {
-  background-color: rgba(200, 87, 0, 0.778);
+  font-family: "Evafiya";
+  overflow: hidden;
+}
+.sec2-spline {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.2);
 }
 .section-3 {
   background-color: rgba(0, 0, 174, 0.673);
