@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: monospace;
+}
+
+.main-wrapper {
+  display: flex;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  flex-shrink: 0;
+}
+
+.section-1 {
+  background-color: gray;
+}
+
+.section-2 {
+  background-color: rgb(255, 255, 255);
+}
+.section-3 {
+  background-color: rgba(0, 0, 174, 0.673);
+}
+
+.section-4 {
+  background-color: rgb(255, 179, 0);
+}
