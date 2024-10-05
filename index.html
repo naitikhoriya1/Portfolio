@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kove</title>
+    <title>ethical_khoriya</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -17,7 +17,59 @@
 
   <body>
     <div class="main-wrapper">
-      <section class="section-1"></section>
+      <section class="section-1">
+        <div class="container">
+          <div class="pre-loader">
+            <div class="loader"></div>
+            <div class="loader-bg"></div>
+          </div>
+          <div class="loader-content">
+            <div class="count">
+              <p>0</p>
+            </div>
+            <div class="copy">
+              <p class="ml16">ethical_khoriya</p>
+            </div>
+          </div>
+          <div class="loader-2"></div>
+        </div>
+
+        <div class="site-content" style="display: none">
+          <nav>
+            <div class="logo">
+              <a href="#">Ethic</a>
+            </div>
+            <div class="links">
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Contact</a>
+            </div>
+          </nav>
+          <div class="header">
+            <h1>E</h1>
+            <h1>T</h1>
+            <h1>H</h1>
+            <h1>I</h1>
+            <h1>C</h1>
+            <h1>A</h1>
+            <h1>T</h1>
+          </div>
+
+          <div class="footer">
+            <div class="footer-copy">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                aut fugit iusto quod voluptas non est aliquam eum. Ducimus,
+                officiis?
+              </p>
+            </div>
+            <div class="footer-nav">
+              <div class="img"></div>
+              <div class="img"></div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="section-2"></section>
       <section class="section-3"></section>
       <section class="section-4"></section>
@@ -27,5 +79,98 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
   <script src="./script.js"></script>
+  <script>
+    function startLoader() {
+      let counterElement = document.querySelector(".count p");
+      let currentValue = 0;
+
+      function updateCounter() {
+        if (currentValue < 100) {
+          let increment = Math.floor(Math.random() * 10) + 1;
+          currentValue = Math.min(currentValue + increment, 100);
+          counterElement.innerText = currentValue;
+
+          let delay = Math.floor(Math.random() * 200) + 25;
+          setTimeout(updateCounter, delay);
+        } else {
+          gsap.to(".count", { opacity: 0, delay: 0.5, duration: 0.5 });
+          document.querySelector(".site-content").style.display = "block";
+          gsap.fromTo(
+            ".site-content",
+            { opacity: 0 },
+            { opacity: 1, duration: 1 }
+          );
+        }
+      }
+      updateCounter();
+    }
+    startLoader();
+
+    // GSAP Animation
+    let textWrapper = document.querySelector(".ml16");
+    textWrapper.innerHTML = textWrapper.textContent.replace(
+      /\S/g,
+      "<span class='letter'>$&</span>"
+    );
+
+    anime
+      .timeline({ loop: false })
+      .add({
+        targets: ".ml16 .letter",
+        translateY: [-100, 0],
+        easing: "easeOutExpo",
+        duration: 1500,
+        delay: (el, i) => 30 * i,
+      })
+      .add({
+        targets: ".ml16 .letter",
+        translateY: [0, 100],
+        easing: "easeOutExpo",
+        duration: 3000,
+        delay: (el, i) => 2000 + 30 * i,
+      });
+    gsap.to(".pre-loader", {
+      scale: 0.5,
+      ease: "power4.inOut",
+      duration: 2,
+      delay: 3,
+    });
+
+    gsap.to(".loader", {
+      height: "0",
+      ease: "power4.inOut",
+      duration: 1.5,
+      delay: 3.75,
+    });
+
+    gsap.to(".loader-bg", {
+      height: "0",
+      ease: "power4.inOut",
+      duration: 1.5,
+      delay: 4,
+    });
+
+    gsap.to(".loader-2", {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 0% , 0% 0%)",
+      ease: "power4.inOut",
+      duration: 1.5,
+      delay: 5,
+    });
+    gsap.to(".header h1", {
+      y: 200,
+      ease: "power4.inOut",
+      duration: 1.5,
+      delay: 3.75,
+      stagger: 0.05,
+    });
+    gsap.to(".img", {
+      clipPath: "polygon(0 0, 100% 0%, 100% 100% , 0% 100%)",
+      ease: "power4.inOut",
+      duration: 1.5,
+      delay: 4.75,
+      stagger: 0.25,
+    });
+  </script>
 </html>
