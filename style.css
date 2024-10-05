@@ -36,7 +36,7 @@ section {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,22 +50,27 @@ section {
   transform: translate(-50%, -50%);
   width: 600px;
   z-index: 2;
-  color: #fff;
-  font-size: 50px;
+  color: #000;
+  font-size: 20px;
 }
 .count {
   flex: 2;
-  text-align: right;
+  /* text-align: right; */
   line-height: 1;
   padding: 0 1rem;
 }
 .copy {
   flex: 6;
-  font-size: 45px;
+  /* font-size: 16px; */
+  text-align: center;
+  color: #000;
   /* text-transform: uppercase; */
   line-height: 1;
 }
 .ml16 {
+  font-family: "Solenoidal";
+  font-size: 22px;
+  font-weight: 100;
   overflow: hidden;
 }
 
@@ -79,7 +84,7 @@ section {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: rgb(84, 13, 13);
+  background-color: rgb(0, 0, 0);
   z-index: -1;
 }
 

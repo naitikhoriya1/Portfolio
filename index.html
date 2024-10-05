@@ -28,7 +28,7 @@
               <p>0</p>
             </div>
             <div class="copy">
-              <p class="ml16">ethical_khoriya</p>
+              <p class="ml16">Creative Web Developer | UI / UX Designer</p>
             </div>
           </div>
           <div class="loader-2"></div>
@@ -120,43 +120,43 @@
       .add({
         targets: ".ml16 .letter",
         translateY: [-100, 0],
-        easing: "easeOutExpo",
+        // easing: "easeOutExpo",
         duration: 1500,
         delay: (el, i) => 30 * i,
       })
       .add({
         targets: ".ml16 .letter",
         translateY: [0, 100],
-        easing: "easeOutExpo",
+        // easing: "easeOutExpo",
         duration: 3000,
-        delay: (el, i) => 2000 + 30 * i,
+        delay: (el, i) => 30 * i,
       });
-    gsap.to(".pre-loader", {
-      scale: 0.5,
-      ease: "power4.inOut",
-      duration: 2,
-      delay: 3,
-    });
+    // gsap.to(".pre-loader", {
+    //   scale: 0.5,
+    //   ease: "power4.inOut",
+    //   duration: 2,
+    //   delay: 3,
+    // });
 
     gsap.to(".loader", {
       height: "0",
       ease: "power4.inOut",
       duration: 1.5,
-      delay: 3.75,
+      delay: 2,
     });
 
     gsap.to(".loader-bg", {
       height: "0",
       ease: "power4.inOut",
       duration: 1.5,
-      delay: 4,
+      delay: 3,
     });
 
     gsap.to(".loader-2", {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 0% , 0% 0%)",
       ease: "power4.inOut",
       duration: 1.5,
-      delay: 5,
+      delay: 4,
     });
     gsap.to(".header h1", {
       y: 200,
