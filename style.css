@@ -20,10 +20,6 @@ section {
   flex-shrink: 0;
 }
 
-.section-1 {
-  /* background-color: gray; */
-}
-
 .pre-loader {
   position: fixed;
   top: 0;
